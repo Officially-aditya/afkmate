@@ -1,0 +1,10 @@
+# AFKmate Website Robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://afkmate.dev/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

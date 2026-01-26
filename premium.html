@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upgrade to AFKmate Premium for unlimited code analyses, priority support, and advanced features.">
+    <title>Upgrade to Premium | AFKmate</title>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .premium-page {
+            padding-top: calc(72px + var(--spacing-3xl));
+            min-height: 100vh;
+        }
+
+        .premium-hero {
+            text-align: center;
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .premium-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background: var(--color-dark);
+            color: var(--color-light);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .premium-title {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .premium-subtitle {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto var(--spacing-3xl);
+        }
+
+        .premium-comparison {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xl);
+            max-width: 900px;
+            margin: 0 auto var(--spacing-4xl);
+        }
+
+        .comparison-card {
+            padding: var(--spacing-2xl);
+            background: var(--color-light);
+            border: 1px solid var(--color-dark-10);
+            border-radius: var(--radius-xl);
+        }
+
+        .comparison-card.premium {
+            border-color: var(--color-dark);
+            border-width: 2px;
+            position: relative;
+        }
+
+        .comparison-card.premium::before {
+            content: 'Recommended';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: var(--spacing-xs) var(--spacing-md);
+            background: var(--color-dark);
+            color: var(--color-light);
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: var(--radius-full);
+        }
+
+        .comparison-header {
+            text-align: center;
+            padding-bottom: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            border-bottom: 1px solid var(--color-dark-10);
+        }
+
+        .comparison-title {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .comparison-price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--color-dark);
+        }
+
+        .comparison-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-medium);
+        }
+
+        .comparison-features {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .comparison-features li {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-sm) 0;
+            color: var(--color-medium);
+        }
+
+        .comparison-features li.included {
+            color: var(--color-dark);
+        }
+
+        .comparison-features svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .comparison-features .check {
+            stroke: var(--color-dark);
+        }
+
+        .comparison-features .cross {
+            stroke: var(--color-medium-40);
+        }
+
+        .checkout-section {
+            background: var(--color-dark-05);
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .checkout-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: var(--spacing-2xl);
+            background: var(--color-light);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .checkout-form h3 {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-dark);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: var(--spacing-md);
+            border: 1px solid var(--color-dark-20);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            transition: border-color var(--transition-fast);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--color-dark);
+        }
+
+        .form-group input::placeholder {
+            color: var(--color-medium-60);
+        }
+
+        .checkout-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-lg) 0;
+            border-top: 1px solid var(--color-dark-10);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .checkout-total span:first-child {
+            color: var(--color-medium);
+        }
+
+        .checkout-total span:last-child {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-dark);
+        }
+
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+            color: var(--color-medium);
+            font-size: 0.875rem;
+        }
+
+        .secure-badge svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .guarantee {
+            text-align: center;
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .guarantee-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto var(--spacing-lg);
+            background: var(--color-dark-10);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .guarantee-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--color-dark);
+        }
+
+        .guarantee h3 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .guarantee p {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .premium-comparison {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-card.premium {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="/" class="logo">
+                <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="#4f5c78"/>
+                    <path d="M8 12L16 8L24 12V20L16 24L8 20V12Z" stroke="#f0f8ff" stroke-width="2" stroke-linejoin="round"/>
+                    <circle cx="16" cy="16" r="3" fill="#f0f8ff"/>
+                </svg>
+                <span class="logo-text">AFKmate</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="premium-page">
+        <!-- Hero -->
+        <section class="premium-hero">
+            <div class="container">
+                <div class="premium-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    Premium
+                </div>
+                <h1 class="premium-title">Unlock Unlimited Power</h1>
+                <p class="premium-subtitle">
+                    Get unlimited code analyses, priority processing, and advanced features to supercharge your development workflow.
+                </p>
+
+                <!-- Comparison -->
+                <div class="premium-comparison">
+                    <div class="comparison-card">
+                        <div class="comparison-header">
+                            <h3 class="comparison-title">Free</h3>
+                            <div class="comparison-price">$0 <span>forever</span></div>
+                        </div>
+                        <ul class="comparison-features">
+                            <li class="included">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="check">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                10 analyses per 15 days
+                            </li>
+                            <li class="included">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="check">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                Basic issue detection
+                            </li>
+                            <li class="included">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="check">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                Auto-fix suggestions
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="cross">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                                Priority queue
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="cross">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                                Advanced security scanning
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="cross">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                                Export reports
+                            </li>
+                        </ul>
+                        <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-secondary btn-block" target="_blank">
+                            Current Plan
+                        </a>
+                    </div>
+
+                    <div class="comparison-card premium">
+                        <div class="comparison-header">
+                            <h3 class="comparison-title">Premium</h3>
+                            <div class="comparison-price">$9 <span>/month</span></div>
+                        </div>
+                        <ul class="comparison-features">
+                            <li class="included">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="check">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <strong>Unlimited</strong> analyses
+                            </li>
+                            <li class="included">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="check">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                All issue types detected
+                            </li>
+                            <li class="included">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="check">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                Auto-fix suggestions
+                            </li>
+                            <li class="included">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="check">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                Priority queue
+                            </li>
+                            <li class="included">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="check">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                Advanced security scanning
+                            </li>
+                            <li class="included">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="check">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                Export reports (JSON/MD)
+                            </li>
+                        </ul>
+                        <a href="#checkout" class="btn btn-primary btn-block">
+                            Upgrade Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checkout -->
+        <section class="checkout-section" id="checkout">
+            <div class="container">
+                <div class="checkout-form">
+                    <h3>Complete Your Upgrade</h3>
+                    <form id="premiumForm">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card">Card Number</label>
+                            <input type="text" id="card" name="card" placeholder="4242 4242 4242 4242" required>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label for="expiry">Expiry Date</label>
+                                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvc">CVC</label>
+                                <input type="text" id="cvc" name="cvc" placeholder="123" required>
+                            </div>
+                        </div>
+                        <div class="checkout-total">
+                            <span>Total today</span>
+                            <span>$9.00/mo</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">
+                            Subscribe to Premium
+                        </button>
+                        <div class="secure-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                            Secure payment powered by Stripe
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guarantee -->
+        <section class="guarantee">
+            <div class="container">
+                <div class="guarantee-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <polyline points="9 12 11 14 15 10"/>
+                    </svg>
+                </div>
+                <h3>30-Day Money-Back Guarantee</h3>
+                <p>
+                    Not satisfied? Get a full refund within 30 days, no questions asked.
+                    We're confident you'll love AFKmate Premium.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2025 AFKmate. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/afkmate" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/afkmate" target="_blank" rel="noopener" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script>
+        // Premium form handler
+        document.getElementById('premiumForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // This would integrate with Stripe or another payment processor
+            alert('Payment processing coming soon! For now, use the VS Code command "AFKmate: Activate Premium" with your token.');
+        });
+    </script>
+</body>
+</html>

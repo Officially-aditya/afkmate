@@ -1,0 +1,45 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="1200" height="630" fill="#f0f8ff"/>
+
+    <!-- Gradient overlay -->
+    <rect width="600" height="630" fill="#4f5c78" opacity="0.05"/>
+
+    <!-- Logo -->
+    <g transform="translate(100, 240)">
+        <rect width="80" height="80" rx="16" fill="#4f5c78"/>
+        <path d="M20 30L40 20L60 30V50L40 60L20 50V30Z" stroke="#f0f8ff" stroke-width="4" stroke-linejoin="round"/>
+        <circle cx="40" cy="40" r="8" fill="#f0f8ff"/>
+    </g>
+
+    <!-- Text -->
+    <text x="200" y="280" font-family="Inter, system-ui, sans-serif" font-size="64" font-weight="800" fill="#4f5c78">AFKmate</text>
+    <text x="100" y="350" font-family="Inter, system-ui, sans-serif" font-size="32" fill="#5f6c88">Your AI Coding Companion</text>
+    <text x="100" y="400" font-family="Inter, system-ui, sans-serif" font-size="24" fill="#5f6c88">Automatic code analysis while you're away</text>
+
+    <!-- Code window illustration -->
+    <g transform="translate(700, 140)">
+        <rect width="400" height="350" rx="16" fill="#4f5c78" filter="drop-shadow(0 10px 20px rgba(79, 92, 120, 0.2))"/>
+        <rect y="0" width="400" height="40" rx="16" fill="#5f6c88"/>
+        <circle cx="24" cy="20" r="6" fill="#f0f8ff" opacity="0.6"/>
+        <circle cx="44" cy="20" r="6" fill="#f0f8ff" opacity="0.4"/>
+        <circle cx="64" cy="20" r="6" fill="#f0f8ff" opacity="0.8"/>
+
+        <!-- Code lines -->
+        <rect x="20" y="60" width="200" height="12" rx="2" fill="#f0f8ff" opacity="0.3"/>
+        <rect x="20" y="85" width="280" height="12" rx="2" fill="#f0f8ff" opacity="0.5"/>
+        <rect x="20" y="110" width="150" height="12" rx="2" fill="#f0f8ff" opacity="0.3"/>
+        <rect x="20" y="135" width="320" height="12" rx="2" fill="#f0f8ff" opacity="0.7"/>
+        <rect x="20" y="160" width="180" height="12" rx="2" fill="#f0f8ff" opacity="0.4"/>
+        <rect x="20" y="185" width="250" height="12" rx="2" fill="#f0f8ff" opacity="0.5"/>
+        <rect x="20" y="210" width="100" height="12" rx="2" fill="#f0f8ff" opacity="0.3"/>
+
+        <!-- Analysis badge -->
+        <rect x="200" y="280" width="180" height="40" rx="20" fill="#f0f8ff"/>
+        <circle cx="225" cy="300" r="8" fill="#4f5c78"/>
+        <text x="245" y="307" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#4f5c78">Analysis Complete</text>
+    </g>
+
+    <!-- Bottom tagline -->
+    <text x="100" y="560" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#5f6c88">afkmate.dev</text>
+</svg>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AFKmate Documentation - Learn how to use AFKmate effectively.">
+    <title>Documentation | AFKmate</title>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="/" class="logo">
+                <img src="/images/logo.svg" alt="AFKmate Logo" class="logo-icon">
+                <span class="logo-text">AFKmate</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Install Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Documentation</h1>
+                <p>Everything you need to know about using AFKmate.</p>
+            </div>
+
+            <div class="legal-content">
+                <section class="content-section">
+                    <h2>Getting Started</h2>
+                    <h3>Installation</h3>
+                    <ol>
+                        <li>Open VS Code</li>
+                        <li>Go to Extensions (Cmd+Shift+X / Ctrl+Shift+X)</li>
+                        <li>Search for "AFKmate"</li>
+                        <li>Click Install</li>
+                        <li>Reload VS Code when prompted</li>
+                    </ol>
+
+                    <h3>First Analysis</h3>
+                    <p>AFKmate automatically starts monitoring when you open VS Code. Simply code as usual, and after 3 minutes of inactivity, AFKmate will analyze your modified files.</p>
+                    <p>To trigger an immediate analysis, use the keyboard shortcut:</p>
+                    <ul>
+                        <li><strong>Mac:</strong> Cmd+Shift+A</li>
+                        <li><strong>Windows/Linux:</strong> Ctrl+Shift+A</li>
+                    </ul>
+                </section>
+
+                <section class="content-section">
+                    <h2>Configuration</h2>
+                    <h3>Settings</h3>
+                    <p>Open VS Code Settings and search for "AFKmate" to configure:</p>
+                    <ul>
+                        <li><strong>Idle Time:</strong> Minutes before analysis starts (default: 3)</li>
+                        <li><strong>Auto Start:</strong> Automatically analyze when idle (default: true)</li>
+                        <li><strong>Primary Provider:</strong> Choose between cloud or local Ollama</li>
+                        <li><strong>Notification Level:</strong> Control notification frequency</li>
+                        <li><strong>Show Errors/Warnings/Suggestions:</strong> Filter issue types</li>
+                    </ul>
+
+                    <h3>Using Ollama (Local LLM)</h3>
+                    <ol>
+                        <li>Install Ollama from <a href="https://ollama.ai" target="_blank">ollama.ai</a></li>
+                        <li>Pull a code model: <code>ollama pull codellama</code></li>
+                        <li>Enable Ollama in AFKmate settings</li>
+                        <li>Set AFKmate's primary provider to "ollama"</li>
+                    </ol>
+                </section>
+
+                <section class="content-section">
+                    <h2>Features</h2>
+                    <h3>Auto-Fix</h3>
+                    <p>When AFKmate finds issues, it can generate fixes automatically:</p>
+                    <ol>
+                        <li>Click "Generate Fix" on any issue</li>
+                        <li>Preview the suggested changes</li>
+                        <li>Click "Apply Fix" to implement</li>
+                        <li>Use "Undo Fix" if needed</li>
+                    </ol>
+
+                    <h3>Export Results</h3>
+                    <p>Export analysis results for documentation or sharing:</p>
+                    <ul>
+                        <li>Use <code>AFKmate: Export Results</code> command</li>
+                        <li>Choose JSON or Markdown format</li>
+                        <li>Copy to clipboard with <code>AFKmate: Copy Results</code></li>
+                    </ul>
+                </section>
+
+                <section class="content-section">
+                    <h2>Keyboard Shortcuts</h2>
+                    <ul>
+                        <li><strong>Cmd/Ctrl+Shift+A:</strong> Analyze Now</li>
+                        <li><strong>Cmd/Ctrl+Shift+P:</strong> Pause/Resume Analysis</li>
+                        <li><strong>Cmd/Ctrl+Shift+U:</strong> Check Usage</li>
+                        <li><strong>Cmd/Ctrl+Shift+F:</strong> Fix All Issues</li>
+                        <li><strong>Cmd/Ctrl+Shift+Z:</strong> Undo Last Fix</li>
+                    </ul>
+                </section>
+
+                <section class="content-section">
+                    <h2>Troubleshooting</h2>
+                    <h3>Analysis Not Starting</h3>
+                    <ul>
+                        <li>Check if analysis is paused (status bar indicator)</li>
+                        <li>Verify you have remaining free analyses</li>
+                        <li>Ensure you're connected to the internet (or using Ollama)</li>
+                    </ul>
+
+                    <h3>Slow Analysis</h3>
+                    <ul>
+                        <li>Large files take longer to analyze</li>
+                        <li>Check your internet connection</li>
+                        <li>Consider using local Ollama for faster results</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 AFKmate. All rights reserved.</p>
+                <div class="footer-links-inline">
+                    <a href="/privacy.html">Privacy</a>
+                    <a href="/terms.html">Terms</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
