@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "name": "afkmate-website",
-  "public": true,
+  "buildCommand": "echo 'No build required'",
+  "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
