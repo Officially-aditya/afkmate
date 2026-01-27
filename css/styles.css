@@ -1194,6 +1194,10 @@ section {
         margin: 0 auto;
     }
 
+    .hero-bg-gradient {
+        display: none;
+    }
+
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
