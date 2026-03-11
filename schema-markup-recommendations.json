@@ -1,0 +1,327 @@
+{
+  "_comment": "Schema.org JSON-LD recommendations for afkmate.in -- Generated 2026-03-11",
+  "_instructions": "Add each block as a <script type='application/ld+json'> tag in the <head> of the corresponding page. Adjust the domain (afkmate.in vs afkmate.dev) to match your canonical URL.",
+
+  "index.html": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AFKmate",
+      "url": "https://www.afkmate.in",
+      "logo": "https://www.afkmate.in/images/logo.svg",
+      "description": "Your AI coding companion that analyzes your code while you're away.",
+      "sameAs": [
+        "https://github.com/afkmate",
+        "https://twitter.com/afkmate",
+        "https://discord.gg/afkmate",
+        "https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "support@afkmate.dev",
+        "contactType": "customer support",
+        "url": "https://www.afkmate.in/contact"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AFKmate",
+      "url": "https://www.afkmate.in",
+      "description": "AFKmate - Your AI coding companion that analyzes your code while you're away.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "AFKmate",
+        "url": "https://www.afkmate.in"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AFKmate",
+      "description": "AI-powered VS Code extension that automatically analyzes your code when you step away. Detects bugs, security vulnerabilities, and style issues with one-click auto-fix.",
+      "url": "https://www.afkmate.in",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Code Analysis Tool",
+      "operatingSystem": "Windows, macOS, Linux",
+      "softwareRequirements": "Visual Studio Code",
+      "installUrl": "https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate",
+      "downloadUrl": "https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate",
+      "screenshot": "https://www.afkmate.in/images/og-image.png",
+      "featureList": [
+        "Smart idle detection",
+        "Deep AI-powered code analysis",
+        "One-click auto-fix",
+        "Offline mode with queue support",
+        "Smart caching",
+        "Local LLM support via Ollama",
+        "Bug detection",
+        "Security vulnerability scanning",
+        "Multi-language support"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "10 analyses per 15 days, all issue types, auto-fix suggestions, offline queue, local Ollama support",
+          "url": "https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate",
+          "availability": "https://schema.org/InStock",
+          "category": "free"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium",
+          "price": "9.00",
+          "priceCurrency": "USD",
+          "billingIncrement": "P1M",
+          "description": "Unlimited analyses, priority queue, advanced security scanning, export reports, email support, early access to features",
+          "url": "https://www.afkmate.in/premium",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "9.00",
+            "priceCurrency": "USD",
+            "referenceQuantity": {
+              "@type": "QuantitativeValue",
+              "value": "1",
+              "unitCode": "MON"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Team",
+          "price": "29.00",
+          "priceCurrency": "USD",
+          "billingIncrement": "P1M",
+          "description": "Up to 10 team members, everything in Premium, team dashboard, shared configurations, priority support, custom rules",
+          "url": "https://www.afkmate.in/#pricing",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "29.00",
+            "priceCurrency": "USD",
+            "referenceQuantity": {
+              "@type": "QuantitativeValue",
+              "value": "1",
+              "unitCode": "MON"
+            }
+          }
+        }
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "AFKmate",
+        "url": "https://www.afkmate.in"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "AFKmate - Your AI Coding Companion",
+      "description": "AFKmate - Your AI coding companion that analyzes your code while you're away. Automatic code analysis, bug detection, and auto-fix suggestions for VS Code.",
+      "url": "https://www.afkmate.in",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "AFKmate",
+        "url": "https://www.afkmate.in"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.afkmate.in"
+        }
+      ]
+    }
+  ],
+
+  "premium.html": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Upgrade to Premium | AFKmate",
+      "description": "Upgrade to AFKmate Premium for unlimited code analyses, priority support, and advanced features.",
+      "url": "https://www.afkmate.in/premium",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "AFKmate",
+        "url": "https://www.afkmate.in"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "AFKmate Premium",
+      "description": "Unlimited AI-powered code analyses, priority processing queue, advanced security scanning, and report export for VS Code.",
+      "url": "https://www.afkmate.in/premium",
+      "brand": {
+        "@type": "Organization",
+        "name": "AFKmate"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "9.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.afkmate.in/premium",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "9.00",
+          "priceCurrency": "USD",
+          "referenceQuantity": {
+            "@type": "QuantitativeValue",
+            "value": "1",
+            "unitCode": "MON"
+          }
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.afkmate.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Premium",
+          "item": "https://www.afkmate.in/premium"
+        }
+      ]
+    }
+  ],
+
+  "about.html": [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About AFKmate",
+      "description": "About AFKmate - Our mission to help developers write better code.",
+      "url": "https://www.afkmate.in/about",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "AFKmate",
+        "url": "https://www.afkmate.in"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.afkmate.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://www.afkmate.in/about"
+        }
+      ]
+    }
+  ],
+
+  "contact.html": [
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact AFKmate",
+      "description": "Contact AFKmate - Get in touch with our team.",
+      "url": "https://www.afkmate.in/contact",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "AFKmate",
+        "url": "https://www.afkmate.in"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.afkmate.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://www.afkmate.in/contact"
+        }
+      ]
+    }
+  ],
+
+  "blog.html": [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Blog | AFKmate",
+      "description": "AFKmate Blog - Tips, updates, and insights for developers.",
+      "url": "https://www.afkmate.in/blog",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "AFKmate",
+        "url": "https://www.afkmate.in"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.afkmate.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.afkmate.in/blog"
+        }
+      ]
+    },
+    {
+      "_comment": "Add one BlogPosting block per article. Below are the three articles currently on the page. When articles get their own URLs, move each BlogPosting to the individual article page.",
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Introducing AFKmate: Your AI Coding Companion",
+      "description": "We're excited to announce the launch of AFKmate, a VS Code extension that automatically analyzes your code while you're away from your keyboard.",
+      "datePublished": "2025-01-01",
+      "author": {
+        "@type": "Organization",
+        "name": "AFKmate",
+        "url": "https://www.afkmate.in"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "AFKmate",
+        "url": "https://www.afkmate.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.afkmate.in/images/logo.svg"
+        }
+      }
+    }
+  ]
+}
