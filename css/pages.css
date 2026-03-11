@@ -520,4 +520,35 @@
         flex-wrap: wrap;
         gap: var(--spacing-sm) var(--spacing-lg);
     }
+
+    .page-content {
+        padding-top: calc(72px + var(--spacing-lg));
+        padding-bottom: var(--spacing-2xl);
+    }
+
+    .contact-form {
+        padding: var(--spacing-xl);
+        border-radius: var(--radius-lg);
+    }
+
+    .blog-card {
+        padding: var(--spacing-lg);
+    }
+
+    .team-grid,
+    .cards-grid {
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        padding: var(--spacing-md);
+    }
+
+    .footer-links-inline {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-md);
+    }
 }
