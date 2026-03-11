@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about AFKmate, the world's first passive AI code reviewer. Learn how it works, how it compares to other tools, and why developers choose it.">
+    <title>FAQ | AFKmate</title>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/faq.css">
+    <script>
+        (function(){var t=localStorage.getItem('afkmate-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();
+    </script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="/" class="logo">
+                <img src="/images/logo.svg" alt="AFKmate Logo" class="logo-icon" width="36" height="36">
+                <span class="logo-text">AFKmate</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/faq">FAQ</a>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                    Install Free
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Frequently Asked Questions</h1>
+                <p>Everything you need to know about AFKmate and how it fits into your workflow.</p>
+            </div>
+
+            <div class="faq-page">
+
+                <!-- General -->
+                <div class="faq-category">
+                    <div class="faq-category-title">General</div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>What is AFKmate?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>AFKmate is the world's first passive AI code reviewer. It's a VS Code extension that watches for idle time, analyzes your open files while you're away from the keyboard, and has actionable findings ready when you return.</p>
+                            <p>It doesn't write code for you. It reviews the code you've already written and surfaces things you might have missed: silent bugs, security oversights, performance traps, logic errors.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>What is a code reviewer?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>A code reviewer is someone (or something) that reads through code to catch issues before they reach production. In a team setting, this is usually a teammate who reviews your pull request. But not every developer has that luxury. Solo developers, small teams, late-night pushes.</p>
+                            <p>AFKmate fills that gap. It gives your code a second pair of eyes, even when nobody else is around.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>What is passive code review?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>Most code review tools are active. You push a PR, trigger a scan, or paste code into a chatbot. AFKmate is different. It detects when you stop typing and starts reviewing automatically. No buttons to click, no commands to run. That's what makes it passive.</p>
+                            <p>You write code, you step away, and when you come back, the review is done. It fits into the natural rhythm of how developers actually work.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>Is AFKmate free?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>AFKmate has a free tier that covers the core experience: idle detection, automatic code analysis, and actionable findings. The Premium plan unlocks deeper analysis, auto-fix suggestions, export functionality, and priority support.</p>
+                            <p>You can install the free version from the <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" target="_blank" rel="noopener">VS Code Marketplace</a> and upgrade whenever you're ready.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How It Works -->
+                <div class="faq-category">
+                    <div class="faq-category-title">How It Works</div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>How does AFKmate detect idle time?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>AFKmate monitors your typing activity inside VS Code. When you stop typing for a configurable period (default is 5 minutes), it considers you idle and begins analyzing your open files. There's also a smart idle detection mode that adapts to your typing patterns over time.</p>
+                            <p>You can customize the idle threshold from 1 minute to 30 minutes in VS Code settings.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>Can I trigger analysis manually?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>Yes. Use <code>Cmd+Shift+A</code> on Mac or <code>Ctrl+Shift+A</code> on Windows/Linux to run an analysis immediately. You can also click "Analyze Now" in the sidebar panel.</p>
+                            <p>But the point of AFKmate is that you shouldn't have to. It works while you rest.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>What languages are supported?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>AFKmate supports all major programming languages including JavaScript, TypeScript, Python, Java, C#, Go, Rust, Ruby, PHP, Swift, Kotlin, and more. The AI adapts its analysis based on the file type, applying language-specific rules and patterns to each file it reviews.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>How accurate is the AI analysis?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>Every finding includes a confidence level (high, medium, or low) so you can prioritize accordingly. AFKmate is tuned for precision over recall. It would rather show you 5 real issues than 50 questionable ones.</p>
+                            <p>False positives are rare but possible. You're the developer, you always have the final say.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>What happens when I'm offline?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>If you're using the cloud analysis provider, analyses are queued and processed when you're back online. If you're running Ollama locally, you don't need internet at all. Fully offline, fully private.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>Can I customize the idle detection time?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>Absolutely. Open VS Code settings and search for "AFKmate". You can set the idle time from 1 minute to 30 minutes. There's also a smart idle detection mode that adapts to your typing patterns.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privacy & Security -->
+                <div class="faq-category">
+                    <div class="faq-category-title">Privacy & Security</div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>Is my code sent to external servers?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>By default, code is sent to AFKmate's secure backend for analysis. But if privacy is non-negotiable, you can switch to Ollama for fully local analysis. Your code never leaves your machine.</p>
+                            <p>No cloud, no external servers, no trust required. Enable it in the extension settings.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>Does AFKmate store my code?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>No. Code sent for analysis is processed in memory and discarded immediately after the analysis completes. AFKmate does not store, log, or train on your code. Your code is yours.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>Can I use AFKmate in an enterprise environment?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>Yes. The Ollama integration makes AFKmate suitable for environments with strict data policies. Everything runs on your machine. No data leaves your network.</p>
+                            <p>For teams that need additional compliance guarantees, reach out through the <a href="/contact">contact page</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How AFKmate Compares -->
+                <div class="faq-category">
+                    <div class="faq-category-title">How AFKmate Compares</div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>How is AFKmate different from PR review tools?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>Tools like CodeRabbit, GitHub Copilot code review, and similar services review your code after you push a pull request. They're part of the CI/CD pipeline. AFKmate works earlier in the process, inside your editor, before you even commit.</p>
+                            <p>It catches issues while you're still writing code, not after you've context-switched to a PR. Think of it as the review that happens before the review.</p>
+                            <p>PR review tools are reactive: you push, they respond. AFKmate is proactive: it reviews while you're away, so issues surface before they ever reach a PR.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>How is AFKmate different from AI coding assistants?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>AI coding assistants like GitHub Copilot, Cursor, and Claude Code are designed to write code for you. Autocomplete, chat-driven development, prompt-to-code. AFKmate does the opposite. It doesn't write a single line. It reviews the code you've already written and tells you what might be wrong with it.</p>
+                            <p>If you believe coding is a craft, if you want to stay in control of every line you ship, AFKmate is the tool that respects that. It's a reviewer, not a ghostwriter.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>Can I use AFKmate alongside other tools?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>Absolutely. AFKmate is not a replacement for your existing workflow. Use Copilot for autocomplete, use CodeRabbit for PR reviews, use whatever linter you prefer. AFKmate fills a different gap: the passive, in-editor review that catches what everything else misses.</p>
+                            <p>It layers on top of your stack, not instead of it.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Setup & Configuration -->
+                <div class="faq-category">
+                    <div class="faq-category-title">Setup & Configuration</div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>How do I install AFKmate?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>Open VS Code, go to the Extensions panel (<code>Cmd+Shift+X</code> on Mac, <code>Ctrl+Shift+X</code> on Windows/Linux), search for "AFKmate", and click Install. That's it. No account required for the free tier.</p>
+                            <p>For detailed setup instructions, see the <a href="/docs/getting-started">Getting Started</a> guide.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>How do I set up local analysis with Ollama?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>Install <a href="https://ollama.com" target="_blank" rel="noopener">Ollama</a> on your machine, pull a supported model, and enable local analysis in AFKmate's VS Code settings. Once configured, all analysis runs on your hardware. No internet needed, no code leaves your machine.</p>
+                            <p>See the <a href="/docs/configuration">Configuration</a> guide for step-by-step instructions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>Can I customize what AFKmate looks for?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>Yes. You can configure the types of issues AFKmate reports (bugs, security, performance, style), set confidence thresholds, exclude specific files or directories, and adjust the idle detection timing. All settings are available in VS Code's settings panel under the AFKmate section.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-entry">
+                        <button class="faq-entry-question">
+                            <span>Does AFKmate slow down VS Code?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-entry-answer">
+                            <p>No. AFKmate only activates when you're idle. It doesn't run during active typing, doesn't interfere with IntelliSense, and doesn't add latency to your editor. When analysis runs, it happens in a background process. You won't notice it until you see the results.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 AFKmate. All rights reserved.</p>
+                <div class="footer-links-inline">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms</a>
+                    <a href="/contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+        // FAQ accordion
+        document.querySelectorAll('.faq-entry-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var entry = this.closest('.faq-entry');
+                var isOpen = entry.classList.contains('open');
+                // Close all in same category
+                entry.closest('.faq-category').querySelectorAll('.faq-entry.open').forEach(function(e) {
+                    e.classList.remove('open');
+                });
+                if (!isOpen) entry.classList.add('open');
+            });
+        });
+    </script>
+</body>
+</html>

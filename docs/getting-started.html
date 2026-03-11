@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get started with AFKmate. Install the VS Code extension and run your first passive code review in minutes.">
+    <title>Getting Started | AFKmate Docs</title>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/blog-post.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <script>
+        (function(){var t=localStorage.getItem('afkmate-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();
+    </script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="/" class="logo">
+                <img src="/images/logo.svg" alt="AFKmate Logo" class="logo-icon" width="36" height="36">
+                <span class="logo-text">AFKmate</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/faq">FAQ</a>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Install Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <div class="docs-layout">
+            <aside class="docs-sidebar">
+                <div class="docs-sidebar-title active-section">Getting Started</div>
+                <a href="#installation">Installation</a>
+                <a href="#first-analysis">First Analysis</a>
+                <a href="#keyboard-shortcuts">Keyboard Shortcuts</a>
+
+                <div class="docs-sidebar-title">Configuration</div>
+                <a href="/docs/configuration">Settings</a>
+                <a href="/docs/configuration#ollama">Using Ollama</a>
+                <a href="/docs/configuration#providers">Analysis Providers</a>
+
+                <div class="docs-sidebar-title">Features</div>
+                <a href="/docs/features">Idle Detection</a>
+                <a href="/docs/features#auto-fix">Auto-Fix</a>
+                <a href="/docs/features#export-results">Export Results</a>
+                <a href="/docs/features#confidence-levels">Confidence Levels</a>
+
+                <div class="docs-sidebar-title">Concepts</div>
+                <a href="/docs/concepts">Passive Code Review</a>
+                <a href="/docs/concepts#issue-types">Issue Types</a>
+                <a href="/docs/concepts#local-vs-cloud">Local vs Cloud</a>
+
+                <div class="docs-sidebar-title">Reference</div>
+                <a href="/docs/reference">Commands</a>
+                <a href="/docs/reference#troubleshooting">Troubleshooting</a>
+                <a href="/docs/reference#support">Support</a>
+            </aside>
+
+            <div class="docs-content">
+                <h1>Getting Started</h1>
+                <p class="docs-subtitle">Install AFKmate, write some code, step away. That's it.</p>
+
+                <div class="blog-post-content">
+                    <h2 id="installation">Installation</h2>
+                    <ol>
+                        <li>Open VS Code</li>
+                        <li>Go to Extensions (Cmd+Shift+X / Ctrl+Shift+X)</li>
+                        <li>Search for "AFKmate"</li>
+                        <li>Click Install</li>
+                        <li>Reload VS Code when prompted</li>
+                    </ol>
+                    <p>Alternatively, install directly from the <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" target="_blank" rel="noopener">VS Code Marketplace</a>.</p>
+
+                    <h2 id="first-analysis">First Analysis</h2>
+                    <p>Once installed, AFKmate runs in the background. Write code as you normally would. Step away. When the idle timer kicks in (default: 3 minutes of no keystrokes), AFKmate quietly analyzes your open files and surfaces findings when you return.</p>
+                    <p>If you don't want to wait, trigger analysis manually:</p>
+                    <ul>
+                        <li><strong>Mac:</strong> Cmd+Shift+A</li>
+                        <li><strong>Windows/Linux:</strong> Ctrl+Shift+A</li>
+                    </ul>
+                    <p>Findings show up as inline annotations in your editor and in the AFKmate sidebar.</p>
+
+                    <h2 id="keyboard-shortcuts">Keyboard Shortcuts</h2>
+                    <ul>
+                        <li><strong>Cmd/Ctrl+Shift+A</strong> Analyze Now</li>
+                        <li><strong>Cmd/Ctrl+Shift+P</strong> Pause/Resume Analysis</li>
+                        <li><strong>Cmd/Ctrl+Shift+U</strong> Check Usage</li>
+                        <li><strong>Cmd/Ctrl+Shift+F</strong> Fix All Issues</li>
+                        <li><strong>Cmd/Ctrl+Shift+Z</strong> Undo Last Fix</li>
+                    </ul>
+
+                    <p style="margin-top: var(--spacing-2xl);"><strong>Next:</strong> <a href="/docs/configuration">Configuration</a></p>
+                </div>
+            </div>
+
+            <aside class="docs-toc">
+                <div class="docs-toc-title">On This Page</div>
+                <a href="#installation">Installation</a>
+                <a href="#first-analysis">First Analysis</a>
+                <a href="#keyboard-shortcuts">Keyboard Shortcuts</a>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 AFKmate. All rights reserved.</p>
+                <div class="footer-links-inline">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms</a>
+                    <a href="/contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/main.js"></script>
+    <script>
+        (function(){var s=document.querySelectorAll('.docs-content h2[id]'),t=document.querySelectorAll('.docs-toc a'),b=document.querySelectorAll('.docs-sidebar a[href^="#"]');function u(){var c='';s.forEach(function(e){if(e.getBoundingClientRect().top<120)c=e.id});t.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+c)});b.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+c)})}window.addEventListener('scroll',u,{passive:true});u()})();
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

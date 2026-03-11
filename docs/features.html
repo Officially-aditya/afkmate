@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AFKmate features: idle detection, auto-fix, export results, and confidence levels. Your code reviewed while you step away.">
+    <title>Features | AFKmate Docs</title>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/blog-post.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <script>(function(){var t=localStorage.getItem('afkmate-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})()</script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="/" class="logo"><img src="/images/logo.svg" alt="AFKmate Logo" class="logo-icon" width="36" height="36"><span class="logo-text">AFKmate</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/faq">FAQ</a>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Install Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <div class="docs-layout">
+            <aside class="docs-sidebar">
+                <div class="docs-sidebar-title">Getting Started</div>
+                <a href="/docs/getting-started">Installation</a>
+                <a href="/docs/getting-started#first-analysis">First Analysis</a>
+                <a href="/docs/getting-started#keyboard-shortcuts">Keyboard Shortcuts</a>
+
+                <div class="docs-sidebar-title">Configuration</div>
+                <a href="/docs/configuration">Settings</a>
+                <a href="/docs/configuration#ollama">Using Ollama</a>
+                <a href="/docs/configuration#providers">Analysis Providers</a>
+
+                <div class="docs-sidebar-title active-section">Features</div>
+                <a href="#idle-detection">Idle Detection</a>
+                <a href="#auto-fix">Auto-Fix</a>
+                <a href="#export-results">Export Results</a>
+                <a href="#confidence-levels">Confidence Levels</a>
+
+                <div class="docs-sidebar-title">Concepts</div>
+                <a href="/docs/concepts">Passive Code Review</a>
+                <a href="/docs/concepts#issue-types">Issue Types</a>
+                <a href="/docs/concepts#local-vs-cloud">Local vs Cloud</a>
+
+                <div class="docs-sidebar-title">Reference</div>
+                <a href="/docs/reference">Commands</a>
+                <a href="/docs/reference#troubleshooting">Troubleshooting</a>
+                <a href="/docs/reference#support">Support</a>
+            </aside>
+
+            <div class="docs-content">
+                <h1>Features</h1>
+                <p class="docs-subtitle">What AFKmate does for you while you're away.</p>
+
+                <div class="blog-post-content">
+                    <h2 id="idle-detection">Idle Detection</h2>
+                    <p>This is what makes AFKmate different. No buttons to click, no commands to run. AFKmate watches for idle time and starts reviewing your code automatically. The timer resets every time you type, so it never interrupts your flow.</p>
+                    <p>Smart detection adapts to how you work. Brief pauses like reading code or thinking through a problem won't trigger it.</p>
+
+                    <h2 id="auto-fix">Auto-Fix</h2>
+                    <p>AFKmate doesn't just find issues. It can suggest fixes too:</p>
+                    <ol>
+                        <li>Click "Generate Fix" on any finding in the sidebar</li>
+                        <li>Preview the suggested changes in a diff view</li>
+                        <li>Click "Apply Fix" to implement</li>
+                        <li>Use "Undo Fix" if you want to revert</li>
+                    </ol>
+                    <p>You're the developer. AFKmate suggests, you decide. Always review before applying.</p>
+
+                    <h2 id="export-results">Export Results</h2>
+                    <p>Export analysis results for documentation or sharing:</p>
+                    <ul>
+                        <li>Run <code>AFKmate: Export Results</code> from the command palette</li>
+                        <li>Choose JSON or Markdown format</li>
+                        <li>Use <code>AFKmate: Copy Results</code> to copy to clipboard</li>
+                    </ul>
+
+                    <h2 id="confidence-levels">Confidence Levels</h2>
+                    <p>Signal, not noise. Every finding comes with a confidence level so you can prioritize what actually matters:</p>
+                    <ul>
+                        <li><strong>High:</strong> Almost certainly a real issue. Look at these first.</li>
+                        <li><strong>Medium:</strong> Worth reviewing. Likely a genuine problem.</li>
+                        <li><strong>Low:</strong> Possible concern. Review when you have time.</li>
+                    </ul>
+                    <p>You can filter by confidence level in settings.</p>
+
+                    <p style="margin-top: var(--spacing-2xl);"><strong>Next:</strong> <a href="/docs/concepts">Concepts</a></p>
+                </div>
+            </div>
+
+            <aside class="docs-toc">
+                <div class="docs-toc-title">On This Page</div>
+                <a href="#idle-detection">Idle Detection</a>
+                <a href="#auto-fix">Auto-Fix</a>
+                <a href="#export-results">Export Results</a>
+                <a href="#confidence-levels">Confidence Levels</a>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 AFKmate. All rights reserved.</p><div class="footer-links-inline"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></div></div></div></footer>
+    <script src="/js/main.js"></script>
+    <script>(function(){var s=document.querySelectorAll('.docs-content h2[id]'),t=document.querySelectorAll('.docs-toc a'),b=document.querySelectorAll('.docs-sidebar a[href^="#"]');function u(){var c='';s.forEach(function(e){if(e.getBoundingClientRect().top<120)c=e.id});t.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+c)});b.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+c)})}window.addEventListener('scroll',u,{passive:true});u()})()</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
