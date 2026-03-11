@@ -57,6 +57,10 @@
             stroke: var(--color-dark);
         }
     </style>
+    <!-- Prevent flash of wrong theme -->
+    <script>
+        (function(){var t=localStorage.getItem('afkmate-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();
+    </script>
 </head>
 <body>
     <div class="error-page">

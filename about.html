@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About AFKmate - Our mission to help developers write better code.">
+    <meta name="description" content="About AFKmate - A passive AI code reviewer built for developers who treat coding as a craft, not a prompt.">
     <title>About | AFKmate</title>
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,19 +11,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/blog-post.css">
+    <!-- Prevent flash of wrong theme -->
+    <script>
+        (function(){var t=localStorage.getItem('afkmate-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();
+    </script>
 </head>
 <body>
     <nav class="navbar" id="navbar">
         <div class="container navbar-container">
             <a href="/" class="logo">
-                <img src="/images/logo.svg" alt="AFKmate Logo" class="logo-icon">
+                <img src="/images/logo.svg" alt="AFKmate Logo" class="logo-icon" width="36" height="36">
                 <span class="logo-text">AFKmate</span>
             </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <div class="nav-links" id="navLinks">
                 <a href="/#features">Features</a>
                 <a href="/#pricing">Pricing</a>
                 <a href="/#faq">FAQ</a>
-                <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Install Free</a>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                    Install Free
+                </a>
             </div>
         </div>
     </nav>
@@ -32,62 +54,34 @@
         <div class="container">
             <div class="page-header">
                 <h1>About AFKmate</h1>
-                <p>Your AI coding companion that works while you're away.</p>
+                <p>A passive AI code reviewer for developers who treat coding as a craft.</p>
             </div>
 
-            <div class="legal-content">
-                <section class="content-section">
-                    <h2>Our Mission</h2>
-                    <p>We believe that every developer deserves an AI assistant that works as hard as they do - even when they step away from the keyboard.</p>
-                    <p>AFKmate was born from a simple observation: developers spend significant time away from their code - grabbing coffee, attending meetings, or just taking a well-deserved break. What if that time could be productive?</p>
-                </section>
+            <div class="blog-post-content" style="max-width: 740px; margin: 0 auto;">
+                <h2>Why AFKmate exists</h2>
+                <p>Coding is an art. The elegance of a well-named function, the satisfaction of a clean abstraction, the discipline of handling edge cases because you respect the craft. That's the kind of development we believe in.</p>
+                <p>But the world is moving fast. Vibe coding, prompt-driven development, copy-paste from ChatGPT. These shortcuts work for throwaway scripts, but they don't work for software you actually care about. Software that handles real users' data, runs in production at 3 AM, and gets maintained by someone else six months from now.</p>
+                <p>AFKmate was built for developers who still write their own code. Who still read their diffs before pushing. Who believe the craft of building software is worth doing right.</p>
 
-                <section class="content-section">
-                    <h2>What We Do</h2>
-                    <p>AFKmate automatically analyzes your code when you're idle, finding bugs, security vulnerabilities, and improvement opportunities. When you return, actionable insights are waiting for you.</p>
-                    <p>Our AI-powered analysis understands context, recognizes patterns, and provides suggestions that actually make sense for your codebase.</p>
-                </section>
+                <h2>What AFKmate is</h2>
+                <p>AFKmate is the world's first <strong>passive AI code reviewer</strong>. A VS Code extension that detects when you step away from your keyboard, analyzes your open files while you're gone, and has actionable findings waiting when you get back.</p>
+                <p>Not another autocomplete tool. Not another chatbot. AFKmate doesn't write code for you. It reviews the code you've already written, with depth and care, and surfaces the things you might have missed: silent syntax errors, small logic bugs, security oversights, performance traps.</p>
+                <p>Code reviewers exist. Passive code reviewers? AFKmate is the first.</p>
 
-                <section class="content-section">
-                    <h2>Our Values</h2>
-                    <div class="cards-grid" style="margin-top: var(--spacing-xl);">
-                        <div class="info-card">
-                            <div class="info-card-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                </svg>
-                            </div>
-                            <h3>Privacy First</h3>
-                            <p>Your code is your business. We offer local analysis options so your code never leaves your machine.</p>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-card-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polyline points="12 6 12 12 16 14"/>
-                                </svg>
-                            </div>
-                            <h3>Respect Your Time</h3>
-                            <p>We work when you're away, so you can focus on what matters when you're present.</p>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-card-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                    <polyline points="22 4 12 14.01 9 11.01"/>
-                                </svg>
-                            </div>
-                            <h3>Quality Matters</h3>
-                            <p>Every suggestion is designed to genuinely improve your code, not just add noise.</p>
-                        </div>
-                    </div>
-                </section>
+                <h2>What we believe</h2>
+                <p><strong>Coding is a craft.</strong> We build for developers who care about every line they ship. AFKmate respects that you're the developer, your code is your responsibility.</p>
+                <p><strong>Privacy by default.</strong> Your code is yours. Run everything locally through Ollama. No cloud, no external servers, no trust required.</p>
+                <p><strong>Work while you rest.</strong> No buttons to click, no commands to run. AFKmate detects idle time and reviews your code automatically, so findings are ready when you return.</p>
+                <p><strong>Signal, not noise.</strong> Every finding includes a confidence level. No spam, no obvious suggestions. Only the things that actually matter for your code.</p>
 
-                <section class="content-section">
-                    <h2>Get In Touch</h2>
-                    <p>Have questions, feedback, or just want to say hi? We'd love to hear from you.</p>
-                    <p><a href="/contact.html" class="btn btn-primary" style="margin-top: var(--spacing-md);">Contact Us</a></p>
-                </section>
+                <h2>The problem we solve</h2>
+                <p>There's a gap in every developer's workflow. You write code, you test it, maybe you push it through CI, and you move on. But between writing and testing, subtle issues hide. The off-by-one error, the unsanitized input, the O(n²) loop that compiles fine but scales terribly.</p>
+                <p>Most developers don't have a teammate reviewing every line. And you can't just go to ChatGPT every time something breaks. That's reactive. You're already broken, already context-switching, already losing flow.</p>
+                <p>AFKmate flips this. Instead of you going to the AI after something breaks, the AI comes to you before it breaks. While you're away. While your mind is resting. Your code gets a second pair of eyes, even when nobody else is around.</p>
+
+                <h2>Get in touch</h2>
+                <p>Have questions, feedback, or want to talk about how you write code? We'd love to hear from you.</p>
+                <p><a href="/contact" class="btn btn-outline" style="margin-top: var(--spacing-sm);">Contact Us</a></p>
             </div>
         </div>
     </main>
@@ -97,9 +91,9 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 AFKmate. All rights reserved.</p>
                 <div class="footer-links-inline">
-                    <a href="/privacy.html">Privacy</a>
-                    <a href="/terms.html">Terms</a>
-                    <a href="/contact.html">Contact</a>
+                    <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms</a>
+                    <a href="/contact">Contact</a>
                 </div>
             </div>
         </div>
