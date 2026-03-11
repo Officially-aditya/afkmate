@@ -1,0 +1,66 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b7a99"/>
+      <stop offset="50%" style="stop-color:#5f6c88"/>
+      <stop offset="100%" style="stop-color:#4f5c78"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bgGrad)"/>
+
+  <!-- Owl (scaled 90% from center) -->
+  <g transform="translate(256, 256) scale(0.9) translate(-256, -256)">
+    <!-- Owl Body - rounded cute shape -->
+    <ellipse cx="256" cy="295" rx="155" ry="145" fill="#f0f8ff"/>
+
+    <!-- Owl inner body/belly -->
+    <ellipse cx="256" cy="330" rx="90" ry="85" fill="#5f6c88" opacity="0.15"/>
+
+    <!-- Owl Head - overlapping circle -->
+    <circle cx="256" cy="195" r="120" fill="#f0f8ff"/>
+
+    <!-- Ear tufts -->
+    <path d="M150 120 L175 175 L130 165 Z" fill="#f0f8ff"/>
+    <path d="M362 120 L337 175 L382 165 Z" fill="#f0f8ff"/>
+
+    <!-- Left eye area - slightly closed/sleepy circle -->
+    <ellipse cx="195" cy="195" rx="55" ry="50" fill="#4f5c78"/>
+
+    <!-- Right eye area - slightly closed/sleepy circle -->
+    <ellipse cx="317" cy="195" rx="55" ry="50" fill="#4f5c78"/>
+
+    <!-- Left eye: < > code brackets (sleepy/closed style) -->
+    <g transform="translate(195, 195)">
+      <!-- < bracket -->
+      <path d="M-28 0 L-40 -15 M-28 0 L-40 15" stroke="#f0f8ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- > bracket -->
+      <path d="M28 0 L40 -15 M28 0 L40 15" stroke="#f0f8ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+
+    <!-- Right eye: < > code brackets (sleepy/closed style) -->
+    <g transform="translate(317, 195)">
+      <!-- < bracket -->
+      <path d="M-28 0 L-40 -15 M-28 0 L-40 15" stroke="#f0f8ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- > bracket -->
+      <path d="M28 0 L40 -15 M28 0 L40 15" stroke="#f0f8ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+
+    <!-- Sleepy eyebrows / closed eyelids effect -->
+    <path d="M140 170 Q195 155 250 170" stroke="#4f5c78" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M262 170 Q317 155 372 170" stroke="#4f5c78" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+    <!-- Beak -->
+    <path d="M256 230 L240 260 L256 255 L272 260 Z" fill="#5f6c88"/>
+
+    <!-- Small "z z z" sleep indicators -->
+    <text x="380" y="130" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#f0f8ff" opacity="0.9">z</text>
+    <text x="405" y="100" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#f0f8ff" opacity="0.7">z</text>
+    <text x="425" y="75" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#f0f8ff" opacity="0.5">z</text>
+
+    <!-- Feet -->
+    <ellipse cx="210" cy="420" rx="30" ry="12" fill="#5f6c88"/>
+    <ellipse cx="302" cy="420" rx="30" ry="12" fill="#5f6c88"/>
+  </g>
+</svg>

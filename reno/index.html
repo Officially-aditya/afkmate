@@ -23,8 +23,7 @@
     <title>AFKmate - Your AI Coding Companion</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="/reno/images/favicon.svg">
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,14 +33,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- ==================== Navigation ==================== -->
     <nav class="navbar" id="navbar">
         <div class="container navbar-container">
-            <a href="/" class="logo">
-                <img src="/images/logo.svg" alt="AFKmate Logo" class="logo-icon">
+            <a href="/reno/" class="logo">
+                <img src="images/logo.svg" alt="AFKmate Logo" class="logo-icon">
                 <span class="logo-text">AFKmate</span>
             </a>
 
@@ -63,28 +62,32 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
+    <!-- ==================== Hero Section ==================== -->
+    <header class="hero" id="hero">
+        <!-- Animated background layers -->
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+        </div>
+
+        <div class="container hero-inner">
             <div class="hero-content">
-                <div class="hero-badge">
+                <div class="hero-badge" data-animate="fade-down">
                     <span class="badge-dot"></span>
                     VS Code Extension
                 </div>
-                <h1 class="hero-title">
-                    <div class="scrambled-text-container" data-radius="100" data-duration="1.2" data-speed="0.5" data-chars=".:">
-                        <p>Your AI Teammate,</p>
-                    </div>
-                    <div class="scrambled-text-container highlight" data-radius="100" data-duration="1.2" data-speed="0.5" data-chars=".:">
-                        <p>Even When You're Away</p>
-                    </div>
+                <h1 class="hero-title" data-animate="fade-up">
+                    <span class="title-line">Your AI Teammate,</span>
+                    <span class="title-line highlight">Even When You're Away</span>
                 </h1>
-                <p class="hero-description">
+                <p class="hero-description" data-animate="fade-up" data-delay="0.15">
                     AFKmate automatically analyzes your code when you step away from your keyboard.
                     Come back to actionable insights, bug reports, and AI-powered fixes ready to apply.
                 </p>
-                <div class="hero-cta">
-                    <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-violet btn-lg" target="_blank" rel="noopener">
+                <div class="hero-cta" data-animate="fade-up" data-delay="0.3">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-glow btn-lg" target="_blank" rel="noopener">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                             <polyline points="7 10 12 15 17 10"/>
@@ -92,13 +95,13 @@
                         </svg>
                         Install for VS Code
                     </a>
-                    <a href="#how-it-works" class="btn btn-secondary btn-violet-hover btn-lg">
+                    <a href="#how-it-works" class="btn btn-outline btn-lg">
                         See How It Works
                     </a>
                 </div>
-                <div class="hero-stats">
+                <div class="hero-stats" data-animate="fade-up" data-delay="0.45">
                     <div class="stat">
-                        <span class="stat-number">10</span>
+                        <span class="stat-number" data-count="10">0</span>
                         <span class="stat-label">Free analyses/15 days</span>
                     </div>
                     <div class="stat-divider"></div>
@@ -113,18 +116,20 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="code-window">
-                    <div class="code-window-header">
-                        <div class="window-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
+
+            <div class="hero-visual" data-animate="fade-left">
+                <div class="code-window-wrapper">
+                    <div class="code-window" id="codeWindow">
+                        <div class="code-window-header">
+                            <div class="window-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="window-title">analysis-results.ts</span>
                         </div>
-                        <span class="window-title">analysis-results.ts</span>
-                    </div>
-                    <div class="code-window-body">
-                        <pre><code><span class="line-number">1</span>  <span class="comment">// AFKmate found 3 issues while you were away</span>
+                        <div class="code-window-body">
+                            <pre><code><span class="line-number">1</span>  <span class="comment">// AFKmate found 3 issues while you were away</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>  <span class="error-line"><span class="keyword">const</span> data = <span class="keyword">await</span> fetchUser(id);</span>
 <span class="line-number">4</span>  <span class="error-marker">      ^ Missing null check</span>
@@ -134,30 +139,40 @@
 <span class="line-number">8</span>
 <span class="line-number">9</span>  <span class="suggestion-line">  password: req.body.password</span>
 <span class="line-number">10</span> <span class="suggestion-marker">  ^ Consider hashing before storage</span></code></pre>
-                        <div class="analysis-badge">
-                            <span class="pulse"></span>
-                            Analysis Complete
+                            <div class="analysis-badge">
+                                <span class="pulse"></span>
+                                Analysis Complete
+                            </div>
                         </div>
+                    </div>
+                    <!-- Floating decorative elements -->
+                    <div class="float-element float-el-1">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <div class="float-element float-el-2">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="float-element float-el-3">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hero-bg-gradient"></div>
     </header>
 
-    <!-- Features Section -->
+    <!-- ==================== Features Section ==================== -->
     <section class="features" id="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Powerful Features for Modern Developers</h2>
-                <p class="section-description">
+                <h2 class="section-title" data-animate="split-text">Powerful Features for Modern Developers</h2>
+                <p class="section-description" data-animate="fade-up">
                     AFKmate works silently in the background, analyzing your code with AI precision
                     and presenting actionable results when you return.
                 </p>
             </div>
 
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card" data-animate="card-3d">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"/>
@@ -166,9 +181,10 @@
                     </div>
                     <h3>Smart Idle Detection</h3>
                     <p>Automatically detects when you step away and starts analyzing. Adapts to your typing patterns for accurate detection.</p>
+                    <div class="card-shine"></div>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card" data-animate="card-3d">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -178,9 +194,10 @@
                     </div>
                     <h3>Deep AI Analysis</h3>
                     <p>Finds syntax errors, logic bugs, security vulnerabilities, and style issues using advanced LLM-powered analysis.</p>
+                    <div class="card-shine"></div>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card" data-animate="card-3d">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
@@ -188,9 +205,10 @@
                     </div>
                     <h3>One-Click Auto-Fix</h3>
                     <p>Generate and apply fixes instantly. Preview changes before applying, with full undo support for peace of mind.</p>
+                    <div class="card-shine"></div>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card" data-animate="card-3d">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
@@ -200,9 +218,10 @@
                     </div>
                     <h3>Offline Mode</h3>
                     <p>No internet? No problem. Analyses are queued and processed automatically when you're back online.</p>
+                    <div class="card-shine"></div>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card" data-animate="card-3d">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
@@ -212,9 +231,10 @@
                     </div>
                     <h3>Smart Caching</h3>
                     <p>Intelligent caching avoids re-analyzing unchanged code. Get instant results for files you've already analyzed.</p>
+                    <div class="card-shine"></div>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card" data-animate="card-3d">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="3"/>
@@ -223,85 +243,96 @@
                     </div>
                     <h3>Local LLM Support</h3>
                     <p>Use Ollama for fully local, private analysis. Your code never leaves your machine when using local mode.</p>
+                    <div class="card-shine"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Section -->
+    <!-- ==================== How It Works Section ==================== -->
     <section class="how-it-works" id="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">How AFKmate Works</h2>
-                <p class="section-description">
+                <h2 class="section-title" data-animate="split-text">How AFKmate Works</h2>
+                <p class="section-description" data-animate="fade-up">
                     Set it up once, and AFKmate handles everything automatically.
                     Here's what happens when you step away.
                 </p>
             </div>
 
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>You Code as Usual</h3>
-                        <p>Write code normally in VS Code. AFKmate silently tracks which files you modify without interrupting your flow.</p>
-                    </div>
-                    <div class="step-visual">
-                        <div class="step-icon icon-typing">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="16 18 22 12 16 6"/>
-                                <polyline points="8 6 2 12 8 18"/>
-                            </svg>
-                        </div>
-                    </div>
+            <div class="steps-container">
+                <!-- SVG timeline connector -->
+                <div class="timeline-track">
+                    <svg class="timeline-svg" viewBox="0 0 4 400" preserveAspectRatio="none">
+                        <line x1="2" y1="0" x2="2" y2="400" class="timeline-line-bg"/>
+                        <line x1="2" y1="0" x2="2" y2="400" class="timeline-line-progress" id="timelineProgress"/>
+                    </svg>
                 </div>
 
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>You Step Away</h3>
-                        <p>After 3 minutes of inactivity (configurable), AFKmate detects you're idle and kicks into action.</p>
-                    </div>
-                    <div class="step-visual">
-                        <div class="step-icon icon-away">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
+                <div class="steps">
+                    <div class="step" data-animate="step-reveal">
+                        <div class="step-number"><span>1</span></div>
+                        <div class="step-content">
+                            <h3>You Code as Usual</h3>
+                            <p>Write code normally in VS Code. AFKmate silently tracks which files you modify without interrupting your flow.</p>
+                        </div>
+                        <div class="step-visual">
+                            <div class="step-icon icon-typing">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>AI Analyzes Your Code</h3>
-                        <p>Your modified files are sent to our AI backend (or local Ollama) for deep analysis of bugs, security issues, and improvements.</p>
-                    </div>
-                    <div class="step-visual">
-                        <div class="step-icon icon-analyzing">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M12 6v6l4 2"/>
-                            </svg>
+                    <div class="step" data-animate="step-reveal">
+                        <div class="step-number"><span>2</span></div>
+                        <div class="step-content">
+                            <h3>You Step Away</h3>
+                            <p>After 3 minutes of inactivity (configurable), AFKmate detects you're idle and kicks into action.</p>
+                        </div>
+                        <div class="step-visual">
+                            <div class="step-icon icon-away">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>You Return to Results</h3>
-                        <p>When you come back, a complete analysis awaits in the sidebar. Review issues, apply fixes with one click, and ship better code.</p>
+                    <div class="step" data-animate="step-reveal">
+                        <div class="step-number"><span>3</span></div>
+                        <div class="step-content">
+                            <h3>AI Analyzes Your Code</h3>
+                            <p>Your modified files are sent to our AI backend (or local Ollama) for deep analysis of bugs, security issues, and improvements.</p>
+                        </div>
+                        <div class="step-visual">
+                            <div class="step-icon icon-analyzing">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="step-visual">
-                        <div class="step-icon icon-complete">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <polyline points="22 4 12 14.01 9 11.01"/>
-                            </svg>
+
+                    <div class="step" data-animate="step-reveal">
+                        <div class="step-number"><span>4</span></div>
+                        <div class="step-content">
+                            <h3>You Return to Results</h3>
+                            <p>When you come back, a complete analysis awaits in the sidebar. Review issues, apply fixes with one click, and ship better code.</p>
+                        </div>
+                        <div class="step-visual">
+                            <div class="step-icon icon-complete">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -309,18 +340,18 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- ==================== Pricing Section ==================== -->
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Simple, Transparent Pricing</h2>
-                <p class="section-description">
+                <h2 class="section-title" data-animate="split-text">Simple, Transparent Pricing</h2>
+                <p class="section-description" data-animate="fade-up">
                     Start free with generous limits. Upgrade when you need unlimited power.
                 </p>
             </div>
 
             <div class="pricing-grid">
-                <div class="pricing-card">
+                <div class="pricing-card" data-animate="card-3d">
                     <div class="pricing-header">
                         <h3 class="pricing-title">Free</h3>
                         <div class="pricing-price">
@@ -330,42 +361,33 @@
                     </div>
                     <ul class="pricing-features">
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             10 analyses per 15 days
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             All issue types detected
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Auto-fix suggestions
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Offline queue support
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Local Ollama support
                         </li>
                     </ul>
-                    <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-secondary btn-block" target="_blank" rel="noopener">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-outline btn-block" target="_blank" rel="noopener">
                         Get Started Free
                     </a>
+                    <div class="card-shine"></div>
                 </div>
 
-                <div class="pricing-card featured">
+                <div class="pricing-card featured" data-animate="card-3d">
                     <div class="pricing-badge">Most Popular</div>
                     <div class="pricing-header">
                         <h3 class="pricing-title">Premium</h3>
@@ -376,48 +398,37 @@
                     </div>
                     <ul class="pricing-features">
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             <strong>Unlimited</strong> analyses
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Priority analysis queue
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Advanced security scanning
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Export reports (JSON/MD)
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Email support
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Early access to features
                         </li>
                     </ul>
-                    <a href="#" class="btn btn-primary btn-block" id="premiumBtn">
+                    <a href="#" class="btn btn-glow btn-block" id="premiumBtn">
                         Upgrade to Premium
                     </a>
+                    <div class="card-shine"></div>
                 </div>
 
-                <div class="pricing-card">
+                <div class="pricing-card" data-animate="card-3d">
                     <div class="pricing-header">
                         <h3 class="pricing-title">Team</h3>
                         <div class="pricing-price">
@@ -427,62 +438,51 @@
                     </div>
                     <ul class="pricing-features">
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Up to 10 team members
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Everything in Premium
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Team dashboard
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Shared configurations
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Priority support
                         </li>
                         <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Custom rules
                         </li>
                     </ul>
-                    <a href="#" class="btn btn-secondary btn-block" id="teamBtn">
+                    <a href="#" class="btn btn-outline btn-block" id="teamBtn">
                         Contact Sales
                     </a>
+                    <div class="card-shine"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- ==================== FAQ Section ==================== -->
     <section class="faq" id="faq">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-description">
+                <h2 class="section-title" data-animate="split-text">Frequently Asked Questions</h2>
+                <p class="section-description" data-animate="fade-up">
                     Got questions? We've got answers.
                 </p>
             </div>
 
             <div class="faq-grid">
-                <div class="faq-item">
+                <div class="faq-item" data-animate="faq-slide">
                     <button class="faq-question" aria-expanded="false">
                         <span>Is my code sent to external servers?</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -494,7 +494,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item" data-animate="faq-slide">
                     <button class="faq-question" aria-expanded="false">
                         <span>What languages are supported?</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -506,7 +506,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item" data-animate="faq-slide">
                     <button class="faq-question" aria-expanded="false">
                         <span>Can I trigger analysis manually?</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -518,7 +518,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item" data-animate="faq-slide">
                     <button class="faq-question" aria-expanded="false">
                         <span>How accurate is the AI analysis?</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -530,7 +530,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item" data-animate="faq-slide">
                     <button class="faq-question" aria-expanded="false">
                         <span>What happens when I'm offline?</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -542,7 +542,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item" data-animate="faq-slide">
                     <button class="faq-question" aria-expanded="false">
                         <span>Can I customize the idle detection time?</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -557,13 +557,14 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
+    <!-- ==================== CTA Section ==================== -->
+    <section class="cta" id="cta">
         <div class="container">
-            <div class="cta-content">
+            <div class="cta-content" data-animate="cta-zoom">
+                <div class="cta-glow"></div>
                 <h2>Ready to Code Smarter?</h2>
                 <p>Join developers who ship better code with AFKmate. Install free and see the difference.</p>
-                <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-violet btn-lg" target="_blank" rel="noopener">
+                <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-glow btn-lg" target="_blank" rel="noopener">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                         <polyline points="7 10 12 15 17 10"/>
@@ -575,13 +576,13 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ==================== Footer ==================== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-grid" data-animate="footer-stagger">
                 <div class="footer-brand">
-                    <a href="/" class="logo">
-                        <img src="/images/logo.svg" alt="AFKmate Logo" class="logo-icon">
+                    <a href="/reno/" class="logo">
+                        <img src="images/logo.svg" alt="AFKmate Logo" class="logo-icon">
                         <span class="logo-text">AFKmate</span>
                     </a>
                     <p>Your AI coding companion that works while you're away.</p>
@@ -650,8 +651,13 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="/js/main.js"></script>
-    <script defer src="/_vercel/insights/script.js"></script>
+    <!-- ==================== Scripts ==================== -->
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>

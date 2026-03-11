@@ -19,8 +19,10 @@
   ],
   "author": "AFKmate",
   "license": "MIT",
-  "devDependencies": {},
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "vercel": "^50.8.1"
   }
 }
