@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Introducing AFKmate, a passive AI code reviewer built for developers who treat coding as an art, not a prompt.">
+    <meta name="author" content="AFKmate">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://afkmate.in/blog/introducing-afkmate">
+    <meta property="og:title" content="Introducing AFKmate: Your Coding Companion">
+    <meta property="og:description" content="A passive AI code reviewer built for developers who treat coding as an art, not a prompt.">
+    <meta property="og:image" content="/images/og-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Introducing AFKmate: Your Coding Companion">
+    <meta name="twitter:description" content="A passive AI code reviewer built for developers who treat coding as an art, not a prompt.">
+
+    <title>Introducing AFKmate: Your Coding Companion | AFKmate Blog</title>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/blog-post.css">
+
+    <script>
+        (function(){var t=localStorage.getItem('afkmate-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();
+    </script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="/" class="logo">
+                <img src="/images/logo.svg" alt="AFKmate Logo" class="logo-icon" width="36" height="36">
+                <span class="logo-text">AFKmate</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Install Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <article class="blog-post container">
+            <header class="blog-post-header">
+                <a href="/blog" class="back-link">&larr; Back to Blog</a>
+                <h1>Introducing AFKmate: Your Coding Companion</h1>
+                <div class="blog-post-meta">
+                    <time datetime="2026-03-11">March 11, 2026</time>
+                    <span>8 min read</span>
+                </div>
+            </header>
+
+            <div class="blog-post-content">
+                <p class="lead">There was a time when writing code felt like composing music. Every function had rhythm, every variable had intent, and every commit told a story. Somewhere along the way, a chunk of the developer world traded that craftsmanship for a shortcut: type a prompt, get a blob of code, ship it, and pray.</p>
+
+                <p>AFKmate exists for the developers who didn't make that trade.</p>
+
+                <h2>What is AFKmate?</h2>
+
+                <p>AFKmate is a <strong>passive AI code reviewer</strong>. A VS Code extension that watches your code while you step away, catches issues you missed, and surfaces suggestions before they become production incidents.</p>
+
+                <p>That word <em>passive</em> matters. There are plenty of <a href="https://www.thequery.in/glossary/ai-code-review" target="_blank" rel="noopener">AI code reviewers</a> out there. Tools that run when you click a button, tools you invoke with a command, tools that demand your attention mid-flow. AFKmate is none of those. It waits. It detects when you've gone idle, whether you're grabbing coffee, taking a call, or staring at the ceiling thinking through a problem, and then quietly runs a deep analysis on your open files. When you get back, the results are already there.</p>
+
+                <p>No other tool works like this. Code reviewers exist. Passive code reviewers? AFKmate might genuinely be the first.</p>
+
+                <h2>Why code review still matters</h2>
+
+                <p>Every developer knows code review is non-negotiable. It catches logic errors, enforces consistency, flags security vulnerabilities, and keeps codebases from rotting. But here's the uncomfortable truth: most solo developers skip it entirely, and most teams treat it as a rubber-stamp formality.</p>
+
+                <p>The reason isn't laziness. It's friction. Waiting for a teammate to review your PR takes time. Reviewing your own code is unreliable because your brain fills in the gaps. And running a linter only catches the surface-level stuff. The real bugs, the off-by-one errors, the unchecked null returns, the SQL injection hiding inside a template literal, those slip through because nobody was looking closely enough.</p>
+
+                <p>An AI code reviewer doesn't get tired, doesn't rush through your diff to get back to its own work, and doesn't have a blind spot for the code it just wrote five minutes ago. It brings a second set of eyes that are always available, always thorough, and never in a hurry.</p>
+
+                <h2>Coding is an art. Treat it like one.</h2>
+
+                <p>There's a growing movement called <a href="https://www.thequery.in/glossary/vibe-coding" target="_blank" rel="noopener">vibe coding</a>, the practice of describing what you want in natural language and letting an AI generate the code for you. No reading the output. No understanding the architecture. Just vibes.</p>
+
+                <p>And look, it works for prototypes. It works for throwaway scripts. But it doesn't work for software you actually care about. Software that handles real users' data, software that runs in production at 3 AM, software that another developer will have to maintain six months from now.</p>
+
+                <p>Coding, at its best, is an art. The elegance of a well-named function. The satisfaction of a clean abstraction that makes a complex problem feel simple. The discipline of handling edge cases not because you have to, but because you respect the craft. Developers who write code with this kind of spirit aren't interested in vibe coding. They want to <em>understand</em> every line they ship.</p>
+
+                <p>AFKmate was built for these developers. It doesn't write code for you. It doesn't autocomplete your thoughts. It simply reviews what you've already written, with the depth and care that your code deserves, and points out what you might have missed.</p>
+
+                <h2>Why a tool like AFKmate is necessary</h2>
+
+                <p>The modern development workflow has a blind spot. You write code, you test it, maybe you push it through CI, and then you move on. But between writing and testing, there's a gap where subtle issues hide:</p>
+
+                <ul>
+                    <li><strong>Silent syntax errors</strong> that don't crash your app but produce wrong results. A misplaced bracket that changes control flow, a typo in a variable name that shadows another, a semicolon that turns a loop into a no-op.</li>
+                    <li><strong>Small logic bugs</strong> that only surface under specific conditions. An array index that's off by one, a comparison that should be <code><=</code> instead of <code><</code>, a default parameter that masks undefined input.</li>
+                    <li><strong>Security oversights</strong> that look harmless in isolation. Unsanitized user input, hardcoded credentials in a config, an API endpoint missing authentication middleware.</li>
+                    <li><strong>Performance traps</strong> that compile fine but scale terribly. An O(n&sup2;) loop hiding inside an innocent-looking filter, repeated DOM queries in a render cycle, a database call inside a loop.</li>
+                </ul>
+
+                <p>These aren't the kind of bugs that make your IDE scream red. They're the kind that wait until your users find them.</p>
+
+                <h2>You can't just go to ChatGPT every time something breaks</h2>
+
+                <p>Let's be honest about the current workaround. Something breaks, you copy the error, paste it into ChatGPT, get an answer, paste it back, hope it works. Repeat until it compiles.</p>
+
+                <p>This works. Sometimes. But it's reactive. You're already broken, already frustrated, already context-switching away from your editor and into a chat window. And each time you do it, you lose flow. You lose the mental model you spent twenty minutes building. You lose the thread of the problem you were actually solving.</p>
+
+                <p>AFKmate flips this entirely. Instead of you going to the AI after something breaks, the AI comes to you <em>before</em> it breaks. While you're away. While your mind is resting. You come back to your desk, and there's a quiet list of findings: "This variable might be null on line 42. This regex doesn't handle Unicode. This API call has no error handling."</p>
+
+                <p>No context switch. No copy-pasting. No chat window. Just your code, reviewed, with actionable suggestions waiting for you.</p>
+
+                <h2>How it works</h2>
+
+                <p>AFKmate detects when you go idle. The default is 5 minutes, but you can set it anywhere from 1 to 30. Once idle, it analyzes your open files using advanced LLMs. It checks for syntax issues, logic bugs, security vulnerabilities, and style inconsistencies. Each finding comes with a confidence level (high, medium, or low) so you can prioritize what to look at first.</p>
+
+                <p>If privacy matters to you (and it should), you can run everything locally through Ollama. Your code never leaves your machine. No cloud, no external servers, no trust required.</p>
+
+                <p>When you return to your keyboard, the results are displayed right in your editor. Inline annotations, a sidebar summary, whatever you prefer. You review, you fix, you move on. The whole cycle happens without you lifting a finger to initiate it.</p>
+
+                <h2>Built for developers who still care</h2>
+
+                <p>AFKmate isn't trying to replace you. It's not trying to write your code, generate your tests, or architect your system. It's a companion, one that respects the fact that you're the developer and your code is your responsibility.</p>
+
+                <p>It's for the developer who still reads their own diffs before pushing. Who still thinks about naming things well. Who still believes that the craft of writing software is worth doing right.</p>
+
+                <p>If that's you, <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" target="_blank" rel="noopener">install AFKmate</a> and let it watch your back while you step away.</p>
+
+                <p>Your code deserves a second pair of eyes. Even when nobody else is around.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 AFKmate. All rights reserved.</p>
+                <div class="footer-links-inline">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms</a>
+                    <a href="/contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script defer src="/js/main.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
