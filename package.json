@@ -4,25 +4,23 @@
   "description": "AFKmate - Your AI Coding Companion Website",
   "private": true,
   "scripts": {
-    "dev": "npx serve . -l 3000",
-    "build": "echo 'Static site - no build required'",
-    "preview": "npx serve . -l 3000",
-    "lint": "npx html-validate *.html",
-    "deploy": "vercel --prod"
-  },
-  "keywords": [
-    "afkmate",
-    "vscode",
-    "extension",
-    "code-analysis",
-    "ai"
-  ],
-  "author": "AFKmate",
-  "license": "MIT",
-  "engines": {
-    "node": ">=18"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "vercel": "^50.8.1"
+    "better-auth": "^1.5.5",
+    "next": "^15.5.9",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.1.6",
+    "typescript": "^5"
   }
 }

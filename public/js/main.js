@@ -637,19 +637,19 @@
     // ============================================
 
     const premiumBtn = document.getElementById('premiumBtn');
-    const teamBtn = document.getElementById('teamBtn');
+    const powerBtn = document.getElementById('powerBtn');
 
     if (premiumBtn) {
         premiumBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            showNotification('Install the extension and run "AFKmate: Upgrade to Premium" from the Command Palette.');
+            showNotification('Install the extension and run "AFKmate: View Plans / Manage Subscription" from the Command Palette.');
         });
     }
 
-    if (teamBtn) {
-        teamBtn.addEventListener('click', (e) => {
+    if (powerBtn) {
+        powerBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            window.location.href = 'mailto:team@afkmate.dev?subject=Team%20Plan%20Inquiry';
+            showNotification('Install the extension and run "AFKmate: View Plans / Manage Subscription" from the Command Palette.');
         });
     }
 

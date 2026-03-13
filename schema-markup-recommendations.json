@@ -65,7 +65,7 @@
           "name": "Free",
           "price": "0",
           "priceCurrency": "USD",
-          "description": "10 analyses per 15 days, all issue types, auto-fix suggestions, offline queue, local Ollama support",
+          "description": "20 analyses per month on Claude Haiku 4.5, all issue types, auto-fix suggestions, offline queue, local Ollama support",
           "url": "https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate",
           "availability": "https://schema.org/InStock",
           "category": "free"
@@ -73,15 +73,15 @@
         {
           "@type": "Offer",
           "name": "Premium",
-          "price": "9.00",
+          "price": "10.00",
           "priceCurrency": "USD",
           "billingIncrement": "P1M",
-          "description": "Unlimited analyses, priority queue, advanced security scanning, export reports, email support, early access to features",
+          "description": "Claude Sonnet 4 with 60 analyses per month, priority queue, advanced security scanning, export reports, email support, early access to features",
           "url": "https://www.afkmate.in/premium",
           "availability": "https://schema.org/InStock",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
-            "price": "9.00",
+            "price": "10.00",
             "priceCurrency": "USD",
             "referenceQuantity": {
               "@type": "QuantitativeValue",
@@ -92,16 +92,16 @@
         },
         {
           "@type": "Offer",
-          "name": "Team",
-          "price": "29.00",
+          "name": "Premium Plus",
+          "price": "49.00",
           "priceCurrency": "USD",
           "billingIncrement": "P1M",
-          "description": "Up to 10 team members, everything in Premium, team dashboard, shared configurations, priority support, custom rules",
-          "url": "https://www.afkmate.in/#pricing",
+          "description": "Claude Sonnet 4 with unlimited analyses, priority queue, advanced security scanning, export reports, and best fit for heavy users",
+          "url": "https://www.afkmate.in/premium",
           "availability": "https://schema.org/InStock",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
-            "price": "29.00",
+            "price": "49.00",
             "priceCurrency": "USD",
             "referenceQuantity": {
               "@type": "QuantitativeValue",
@@ -147,8 +147,8 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Upgrade to Premium | AFKmate",
-      "description": "Upgrade to AFKmate Premium for unlimited code analyses, priority support, and advanced features.",
+      "name": "Plans | AFKmate",
+      "description": "Choose AFKmate Premium or Premium Plus for Claude Sonnet 4 access, higher limits, and advanced features.",
       "url": "https://www.afkmate.in/premium",
       "isPartOf": {
         "@type": "WebSite",
@@ -159,30 +159,51 @@
     {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "AFKmate Premium",
-      "description": "Unlimited AI-powered code analyses, priority processing queue, advanced security scanning, and report export for VS Code.",
+      "name": "AFKmate Plans",
+      "description": "AFKmate paid plans for Claude Sonnet 4: Premium includes 60 analyses per month and Premium Plus includes unlimited analyses.",
       "url": "https://www.afkmate.in/premium",
       "brand": {
         "@type": "Organization",
         "name": "AFKmate"
       },
-      "offers": {
-        "@type": "Offer",
-        "price": "9.00",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.afkmate.in/premium",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": "9.00",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Premium",
+          "price": "10.00",
           "priceCurrency": "USD",
-          "referenceQuantity": {
-            "@type": "QuantitativeValue",
-            "value": "1",
-            "unitCode": "MON"
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.afkmate.in/premium",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "10.00",
+            "priceCurrency": "USD",
+            "referenceQuantity": {
+              "@type": "QuantitativeValue",
+              "value": "1",
+              "unitCode": "MON"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium Plus",
+          "price": "49.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.afkmate.in/premium",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "49.00",
+            "priceCurrency": "USD",
+            "referenceQuantity": {
+              "@type": "QuantitativeValue",
+              "value": "1",
+              "unitCode": "MON"
+            }
           }
         }
-      }
+      ]
     },
     {
       "@context": "https://schema.org",

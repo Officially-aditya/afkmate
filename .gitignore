@@ -12,6 +12,7 @@ build/
 .env
 .env.local
 .env.*.local
+.env.example
 
 # IDE
 .idea/
@@ -32,3 +33,7 @@ npm-debug.log*
 
 # Netlify
 .netlify
+
+.next
+.github
+

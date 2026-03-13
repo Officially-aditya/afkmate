@@ -1,0 +1,77 @@
+<!-- SCHEMA MARKUP FOR premium.html — Paste all blocks inside <head> -->
+
+<!-- 1. Product (Premium plan as a standalone product page) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "AFKmate Plans",
+  "description": "AFKmate paid plans for Claude Sonnet 4: Premium includes 60 analyses per month and Premium Plus includes unlimited analyses.",
+  "url": "https://www.afkmate.in/premium",
+  "brand": {
+    "@type": "Organization",
+    "name": "AFKmate",
+    "url": "https://www.afkmate.in"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Premium",
+      "price": "10.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.afkmate.in/premium",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "10.00",
+        "priceCurrency": "USD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": "1",
+          "unitCode": "MON"
+        }
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Premium Plus",
+      "price": "49.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.afkmate.in/premium",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "49.00",
+        "priceCurrency": "USD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": "1",
+          "unitCode": "MON"
+        }
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 2. BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.afkmate.in"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Premium",
+      "item": "https://www.afkmate.in/premium"
+    }
+  ]
+}
+</script>
