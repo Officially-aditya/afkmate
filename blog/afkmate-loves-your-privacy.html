@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Most AI code review tools silently send your code to cloud servers you don't control. Here's why that's a serious problem, and how AFKmate's Ollama support keeps your code on your machine.">
+    <meta name="author" content="AFKmate">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://afkmate.in/blog/afkmate-loves-your-privacy">
+    <meta property="og:title" content="AFKmate Loves Your Privacy">
+    <meta property="og:description" content="Most AI code review tools silently send your code to cloud servers you don't control. Here's why that's a serious problem, and how AFKmate's Ollama support keeps your code on your machine.">
+    <meta property="og:image" content="/images/og-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AFKmate Loves Your Privacy">
+    <meta name="twitter:description" content="Most AI code review tools silently send your code to cloud servers you don't control. Here's why that's a serious problem, and how AFKmate's Ollama support keeps your code on your machine.">
+
+    <title>AFKmate Loves Your Privacy | AFKmate Blog</title>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/blog-post.css">
+
+    <script>
+        (function(){var t=localStorage.getItem('afkmate-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();
+    </script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="/" class="logo">
+                <img src="/images/logo.svg" alt="AFKmate Logo" class="logo-icon" width="36" height="36">
+                <span class="logo-text">AFKmate</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/faq">FAQ</a>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                    Install Free
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <article class="blog-post container">
+            <header class="blog-post-header">
+                <a href="/blog" class="back-link">&larr; Back to Blog</a>
+                <h1>AFKmate Loves Your Privacy</h1>
+                <div class="blog-post-meta">
+                    <time datetime="2026-03-13">March 13, 2026</time>
+                    <span>7 min read</span>
+                </div>
+            </header>
+
+            <div class="blog-post-content">
+                <p class="lead">Every time you use an AI tool to review your code, something happens that nobody puts in the headline: your code leaves your machine. It travels across the internet, lands on a server you've never seen, and gets processed by a model trained mostly on the promise that your data is safe. That promise is worth examining.</p>
+
+                <h2>The cloud LLM problem nobody wants to talk about</h2>
+
+                <p>Here's how almost every AI code review tool works. You write code. The tool, whether it runs in your editor or on your CI pipeline, ships that code to a cloud API. OpenAI, Anthropic, Google, whoever the provider is. The model processes it, sends back an analysis, and the tool displays it. Clean, fast, convenient.</p>
+
+                <p>But that code sat on a server you don't control. And the question that most of these tools quietly paper over is: <em>what happens to it there?</em></p>
+
+                <p>Many cloud LLM providers use customer inputs to improve their models. The default terms of service for popular APIs have changed more than once, and not always in the direction of more privacy. Opting out is sometimes possible. Sometimes it requires enterprise agreements. Sometimes it's buried six layers deep in a settings panel. And even when you opt out of explicit training pipelines, your data still passes through infrastructure that can be breached, subpoenaed, or simply mishandled.</p>
+
+                <p>The developers who build these tools aren't malicious. But they made a choice: build on cloud APIs because they're powerful, convenient, and cheap to integrate. Privacy became someone else's problem.</p>
+
+                <h2>Your code is not just code</h2>
+
+                <p>Think about what actually lives in a real codebase. Not a toy project, not a tutorial, but the code you write at work or for a business you're building.</p>
+
+                <p>There's authentication logic that describes exactly how your system validates users. There's database schema that maps the shape of your data. There's API integration code with provider keys that someone, at some point, committed before the .gitignore was set up correctly. There's business logic that your company spent months refining and considers a genuine competitive advantage. There are internal service names, internal domain structures, internal decisions your team made that you'd rather not hand to a competitor.</p>
+
+                <p>When an AI code review tool sends your files to a cloud LLM, it sends all of that. Not a summary. Not a sanitized version. Your actual code, in whatever state it's in when the review runs.</p>
+
+                <p>Most developers know this abstractly. Most of them haven't thought through what it means in practice.</p>
+
+                <h2>AI code reviewers make this worse</h2>
+
+                <p>A general-purpose AI assistant only sees what you paste into it. You decide what to share. You can be deliberate about it, scrub credentials before pasting, anonymize business logic, keep sensitive parts to yourself.</p>
+
+                <p>An AI code reviewer doesn't work that way. That's the point of it. It analyzes your files automatically, without you having to think about what to include. The passiveness that makes it so useful is the same thing that makes cloud-based implementations so problematic. The moment it runs, <em>everything</em> in your open files is in scope.</p>
+
+                <p>A passive AI code reviewer that phones home to a cloud LLM is silently streaming your entire working context to external servers every time you step away. Not occasionally. Every idle period. Every review cycle. Every file you have open.</p>
+
+                <p>The more useful the tool, the more exposure you have.</p>
+
+                <h2>How AFKmate handles this differently</h2>
+
+                <p>AFKmate supports <a href="https://ollama.com" target="_blank" rel="noopener">Ollama</a>.</p>
+
+                <p>Ollama lets you run large language models entirely on your own hardware. No cloud. No API calls leaving your machine. The model runs locally, the analysis happens locally, and the results come back to your editor without a single packet touching an external server.</p>
+
+                <p>When you configure AFKmate to use Ollama, the entire review pipeline is self-contained. Your code goes to a local process running on your CPU or GPU and comes back as findings. It never leaves your device. There's no server to breach, no training pipeline to opt out of, no terms of service to read carefully. The data simply stays on your machine because it never had a reason to go anywhere else.</p>
+
+                <p>For developers who want the most capable models, cloud providers are still available. AFKmate works with OpenAI, Anthropic, and others. The choice is yours. But the choice exists, and that's the part that matters.</p>
+
+                <h2>Who this actually protects</h2>
+
+                <p>This isn't a niche concern for the especially paranoid. It's a real issue for a wide range of developers:</p>
+
+                <ul>
+                    <li><strong>Developers at companies with strict data handling policies.</strong> Many enterprises explicitly prohibit sending proprietary code to third-party cloud services. With cloud-only tools, you're either violating policy or not using the tool. With Ollama, there's no conflict.</li>
+                    <li><strong>Developers building in regulated industries.</strong> Healthcare, finance, legal. Industries where the data your code handles is sensitive by nature, and where the infrastructure that processes it gets scrutinized.</li>
+                    <li><strong>Solo developers with proprietary algorithms.</strong> If the thing you're building is the thing that gives you an edge, handing its internals to a cloud model is a real risk, even if a low-probability one.</li>
+                    <li><strong>Developers who just want to own their own stack.</strong> Not every privacy concern needs a threat model. Some people want control over their tools because control matters to them. That's a legitimate position.</li>
+                </ul>
+
+                <h2>Privacy shouldn't be an upsell</h2>
+
+                <p>A lot of developer tools treat privacy as a premium feature. Want your data to stay on your machine? That'll be the enterprise tier. Want to opt out of training? Fill out a form and wait for a sales call.</p>
+
+                <p>That framing gets it backwards. Privacy isn't an add-on. It's the baseline you should be able to expect from a tool that sits inside your editor and reads everything you write.</p>
+
+                <p>AFKmate's Ollama support isn't a checkbox in a pricing table. It's a first-class configuration option available to every user. You install Ollama, pull a model, point AFKmate at it, and that's it. From that point on, your code stays yours. Completely.</p>
+
+                <p>Your code is one of the most sensitive things on your machine. Treat it that way. <a href="https://marketplace.visualstudio.com/items?itemName=afkmate.afkmate" target="_blank" rel="noopener">Install AFKmate</a>, configure Ollama, and let the reviews happen where they belong: on your hardware, under your control.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 AFKmate. All rights reserved.</p>
+                <div class="footer-links-inline">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms</a>
+                    <a href="/contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script defer src="/js/main.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
